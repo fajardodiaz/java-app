@@ -2,7 +2,7 @@ name: Testing Github Actions in Java Application
 on: [push]
 jobs:
     test:
-        runs-on: ubuntu-latest7
+        runs-on: ubuntu-latest
         steps:
             - name: Checkout
               uses: actions/checkout@v4.1.0
