@@ -1,0 +1,13 @@
+name: Testing Github Actions in Java Application
+on: [push]
+jobs:
+    test:
+        runs-on: ubuntu-latest7
+        steps:
+            - name: Checkout
+              uses: actions/checkout@v4.1.0
+            - uses: actions/setup-java@v3
+              with:
+                distribution: 'oracle'
+                java-version: '17'
+            - run: ./mvnw -B package
